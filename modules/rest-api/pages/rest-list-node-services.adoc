@@ -51,50 +51,59 @@ The displayed output is as follows:
 
 ----
 {
-  "rev": 2142,
+  "rev": 35119,
   "nodesExt": [
     {
       "services": {
-        "mgmt": 8091,
-        "mgmtSSL": 18091,
+        "backupAPI": 8097,
+        "backupAPIHTTPS": 18097,
+        "backupGRPC": 9124,
+        "capi": 8092,
+        "capiSSL": 18092,
+        "cbas": 8095,
+        "cbasSSL": 18095,
         "eventingAdminPort": 8096,
         "eventingDebug": 9140,
         "eventingSSL": 18096,
+        "fts": 8094,
+        "ftsGRPC": 9130,
+        "ftsGRPCSSL": 19130,
+        "ftsSSL": 18094,
         "indexAdmin": 9100,
-        "indexScan": 9101,
         "indexHttp": 9102,
-        "indexStreamInit": 9103,
-        "indexStreamCatchup": 9104,
-        "indexStreamMaint": 9105,
         "indexHttps": 19102,
+        "indexScan": 9101,
+        "indexStreamCatchup": 9104,
+        "indexStreamInit": 9103,
+        "indexStreamMaint": 9105,
         "kv": 11210,
         "kvSSL": 11207,
-        "capi": 8092,
-        "capiSSL": 18092,
-        "projector": 9999,
+        "mgmt": 8091,
+        "mgmtSSL": 18091,
         "n1ql": 8093,
-        "n1qlSSL": 18093
+        "n1qlSSL": 18093,
+        "projector": 9999
       },
-      "thisNode": true,
-      "hostname": "10.143.192.101",
-      "alternateAddresses": {
-        "external": {
-          "hostname": "10.10.10.11",
-          "ports": {
-            "kv": 9000,
-            "n1ql": 9050
-          }
-        }
-      }
+      "thisNode": true
     }
   ],
+  "revEpoch": 1,
   "clusterCapabilitiesVer": [
     1,
     0
   ],
   "clusterCapabilities": {
     "n1ql": [
-      "enhancedPreparedStatements"
+      "costBasedOptimizer",
+      "indexAdvisor",
+      "javaScriptFunctions",
+      "inlineFunctions",
+      "enhancedPreparedStatements",
+      "readFromReplica"
+    ],
+    "search": [
+      "vectorSearch",
+      "scopedSearchIndex"
     ]
   }
 }
